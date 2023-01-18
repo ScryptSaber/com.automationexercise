@@ -56,6 +56,13 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2]/div[1]/div[1]/div[1]")
     public WebElement firstItem;
 
+    @FindBy(xpath = "//a[normalize-space()='Women']")
+    private WebElement womanCategoryButton;
+
+
+    @FindBy(xpath = "//div[@id='Women']//a[contains(text(),'Dress')]")
+    private WebElement dressCategoryButton;
+
 
     public void clickProductsButton() {
         BrowserUtils.verifyElementDisplayed(productButton);
@@ -94,8 +101,17 @@ public class HomePage extends BasePage {
     public void clickViewProductButton() {
         viewProductButton.click();
     }
+
     public void clickViewCartButton() {
         viewCartButton.click();
+    }
+
+    public void clickDressButton() {
+        dressCategoryButton.click();
+    }
+
+    public void clickWomenCategoryButton() {
+        womanCategoryButton.click();
     }
 
 
@@ -117,6 +133,7 @@ public class HomePage extends BasePage {
     public String getSubscriptionText() {
         return subscriptionTextWebElement.getText();
     }
+
 
     public void setEmailSubscriptionBox(String email) {
         emailSubscriptionBox.sendKeys(email);

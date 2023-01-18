@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepDefs",
-        tags = "@orderLoginBeforeCheckout",
+        tags = "@smoke",
         dryRun = false
         // dryRun=true dedigimizde testi calistirmadan bize eksik adimi verir
         // dryRun=false yaparsak testi calistirir, eksik bir adimla karsilasirsa
@@ -26,4 +26,8 @@ public class CukesRunner {
     //@orderRegisterWhileCheckout
     //@orderRegisterBeforeCheckout
     //@orderLoginBeforeCheckout
+    //@removeFromCart
+    //@viewCategoryProducts
+    //@viewCartBrandProducts
+        //@generalView
 }

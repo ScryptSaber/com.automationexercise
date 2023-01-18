@@ -50,6 +50,12 @@ public class CartPage extends BasePage {
     @FindBy(xpath = "//a[normalize-space()='Place Order']")
     private WebElement placeOrderButton;
 
+    @FindBy(xpath = "//i[@class='fa fa-times']")
+    private WebElement removeButtonX;
+
+    @FindBy(xpath = "(//p[contains(text(),'Click')])[1]")
+    private WebElement cartIsEmptyMessageWebElement;
+
 
     public void setCommentMessageBox(String comments) {
         commentMessageBox.sendKeys(comments);
@@ -73,6 +79,10 @@ public class CartPage extends BasePage {
 
     public void clickPlaceOrderButton() {
         placeOrderButton.click();
+    }
+
+    public void clickRemoveButtonX() {
+        removeButtonX.click();
     }
 
     public String getSubscriptionMessage() {
@@ -105,6 +115,10 @@ public class CartPage extends BasePage {
 
     public String getAddressDeliveryBox() {
         return addressDeliveryBoxWebElement.getText();
+    }
+
+    public String getCartIsEmptyMessage() {
+        return cartIsEmptyMessageWebElement.getText();
     }
 
 }

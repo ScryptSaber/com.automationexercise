@@ -12,33 +12,6 @@ import utilities.Driver;
 public class OrderProcessTests extends BaseStep {
     SoftAssert softAssert = new SoftAssert();
 
-//    @Given("the user is on the login page")
-//    public void user_is_on_the_login_page() {
-//        String url = ConfigReader.getProperty("url");
-//        Driver.getDriver().get(url);
-//        System.out.println("Open :: " + url);
-//        BrowserUtils.wait(1);
-//
-//    }
-//
-//    @Then("I should see Home Page")
-//    public void see_home_page() {
-//        // Verify that home page is visible successfully
-//        String automationText = pages.getHomePage().getAutomationText();
-//        Assert.assertEquals(automationText, "Automation", "Test case 8  Verify that home page is visible successfully");
-//    }
-//
-//    @When("I scroll down")
-//    public void should_scroll_down() {
-//        BrowserUtils.scrollDown("200");
-//    }
-
-//    @When("I dismiss pop_ups")
-//    public void should_dismiss_popups() {
-//        BrowserUtils.navigateBackAndForwardToDismissAds();
-//
-//    }
-
     @When("^I click 'Add to cart' button in Home Page$")
     public void i_click_add_to_cart_button_in_home_page() {
         pages.getHomePage().clickAddToCartButton();
@@ -137,16 +110,13 @@ public class OrderProcessTests extends BaseStep {
     @When("^I Click 'Delete Account' button$")
     public void i_click_delete_account_button() {
     }
+
     @When("^I fill email password and click 'Login' button$")
-    public void i_fill_email_password_and_click_login_button(){
+    public void i_fill_email_password_and_click_login_button() {
         pages.getLoginPage().setLoginEmailAddress("10erd@dll");
         pages.getLoginPage().setLoginEmailPassword("qwerty");
         pages.getLoginPage().clickLoginButton();
     }
-
-//    @Then("^I should see Home Page$")
-//    public void i_should_see_home_page() {
-//    }
 
     @Then("^I should verify hat cart page is displayed$")
     public void i_should_verify_hat_cart_page_is_displayed() {
@@ -189,7 +159,7 @@ public class OrderProcessTests extends BaseStep {
     @Then("^I should Verify success message 'Your order has been placed successfully!'$")
     public void i_should_verify_success_message_your_order_has_been_placed_successfully() {
         String actualAlertSuccessMessageOfCard = pages.getPaymentPage().getAlertSuccessMessageOfCard();
-        softAssert.assertEquals(actualAlertSuccessMessageOfCard,"Your order has been placed successfully!");
+        softAssert.assertEquals(actualAlertSuccessMessageOfCard, "Your order has been placed successfully!");
         softAssert.assertAll();
     }
 

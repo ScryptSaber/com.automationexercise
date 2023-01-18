@@ -43,7 +43,24 @@ public class ProductsPage extends BasePage {
     @FindBy(xpath = "//u[normalize-space()='View Cart']")
     private WebElement viewCartButton;
 
+    @FindBy(xpath = "//a[normalize-space()='Men']")
+    private WebElement menCategoryButton;
+    @FindBy(xpath = "//a[normalize-space()='Tshirts']")
+    private WebElement tshirtCategoryButton;
 
+    @FindBy(xpath = "(//a[contains(text(),'Dress')])[1]")
+    private WebElement dressCategoryButton;
+
+    @FindBy(css = ".title.text-center")
+    private WebElement productsTitleText;
+    @FindBy(xpath = "//h2[normalize-space()='Category']")
+    private WebElement categoryTextWebElement;
+
+    @FindBy(xpath = "//h2[normalize-space()='Brands']")
+    private WebElement brandsText;
+
+    @FindBy(xpath = "//a[@href='/brand_products/Polo']")
+    private WebElement brandsNamePoloWebElement;
 
 
     public void searchProduct(String productName) {
@@ -77,6 +94,7 @@ public class ProductsPage extends BasePage {
     public void clickAddToCartButton() {
         addToCartButton.click();
     }
+
     public void clickAddToCartSecondButton() {
         addToCartSecondButton.click();
     }
@@ -89,6 +107,23 @@ public class ProductsPage extends BasePage {
         continueShoppingButton.click();
     }
 
+    public void clickMenCategoryButton() {
+        menCategoryButton.click();
+    }
+
+    public void clickTshirtCategoryButton() {
+        tshirtCategoryButton.click();
+    }
+
+    public void clickDressCategoryButton() {
+        dressCategoryButton.click();
+    }
+
+    public void clickBrandsNamePolo() {
+        brandsNamePoloWebElement.click();
+
+    }
+
     public String getSearchedProductsMessage() {
         return searchedProductsMessageWebElement.getText();
     }
@@ -97,6 +132,18 @@ public class ProductsPage extends BasePage {
         return searchedProductMenTshirt.getText();
     }
 
+    public String getProductsTitleText() {
+        return productsTitleText.getText();
+    }
 
+
+
+    public String getCategoryText() {
+        return categoryTextWebElement.getText();
+    }
+
+    public String getBrandsText() {
+        return brandsText.getText();
+    }
 
 }
