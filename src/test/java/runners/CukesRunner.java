@@ -29,5 +29,5 @@ public class CukesRunner {
     //@removeFromCart
     //@viewCategoryProducts
     //@viewCartBrandProducts
-        //@generalView
+    //@generalView
 }
