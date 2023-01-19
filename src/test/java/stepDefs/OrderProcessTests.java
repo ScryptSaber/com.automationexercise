@@ -117,6 +117,12 @@ public class OrderProcessTests extends BaseStep {
         pages.getLoginPage().setLoginEmailPassword("qwerty");
         pages.getLoginPage().clickLoginButton();
     }
+    @When("I fill {string}{string} and click Login button")
+    public void ı_fill_email_password_and_click_button(String email,String password) {
+        pages.getLoginPage().setLoginEmailAddress(email);
+        pages.getLoginPage().setLoginEmailPassword(password);
+        pages.getLoginPage().clickLoginButton();
+    }
 
     @Then("^I should verify hat cart page is displayed$")
     public void i_should_verify_hat_cart_page_is_displayed() {

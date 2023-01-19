@@ -2,8 +2,15 @@ package stepDefs;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.asserts.SoftAssert;
 import utilities.BrowserUtils;
+
+import java.io.FileInputStream;
+import java.io.IOException;
 
 public class RemoveProductProcessTests extends BaseStep {
     SoftAssert softAssert = new SoftAssert();
@@ -22,4 +29,5 @@ public class RemoveProductProcessTests extends BaseStep {
                 "TestCase 17 : Error! Verify that product is removed from the cart.\n\n");
         softAssert.assertAll();
     }
+
 }

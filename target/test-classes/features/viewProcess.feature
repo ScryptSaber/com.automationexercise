@@ -1,10 +1,12 @@
 @smoke @generalView
 Feature: As a automationexercise.com user I should be able to view category products
 
-  @viewCategoryProducts
-  Scenario: TestCase 18: View Category Products
+  Background: Common step for scenario: home page landing
     Given the user is on the login page
     Then I should see Home Page
+
+  @viewCategoryProducts
+  Scenario: TestCase 18: View Category Products
     Then I should verify that categories are visible on left side bar
     When I scroll down
     And I click on 'Women' category
@@ -17,8 +19,6 @@ Feature: As a automationexercise.com user I should be able to view category prod
 
   @viewCartBrandProducts
   Scenario: Test Case 19: View & Cart Brand Products
-    Given the user is on the login page
-    Then I should see Home Page
     When I click on 'Products' button
     And I dismiss pop_ups
     And I scroll down
