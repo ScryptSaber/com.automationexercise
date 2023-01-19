@@ -68,6 +68,4 @@ public class ContactUsPage extends BasePage {
     public void clickHomeButton() {
         homeButton.click();
     }
-
-
 }
