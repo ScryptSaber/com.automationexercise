@@ -6,7 +6,6 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SignupPage extends BasePage {
     public SignupPage() {
-
     }
 
     @FindBy(xpath = "//b[normalize-space()='Enter Account Information']")
