@@ -73,7 +73,6 @@ public class SignupPage extends BasePage {
 
     public String getEnterAccountInformationTitle() {
         return enterAccountInfoTitle.getText();
-
     }
 
     public void selectTitleMen() {
