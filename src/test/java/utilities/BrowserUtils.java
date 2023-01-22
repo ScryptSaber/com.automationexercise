@@ -39,7 +39,7 @@ public class BrowserUtils {
          */
 
         TakesScreenshot takesScreenshot = (TakesScreenshot) Driver.getDriver();
-        //Take screenshot of web browser, and save it as a file
+        //Take screenshot of web browser, and save it as a file.
         File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
         // where screenshot will be saved
         File destination = new File(path);
